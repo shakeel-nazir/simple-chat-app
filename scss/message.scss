@@ -1,0 +1,94 @@
+@import 'colors';
+
+body {
+  background: #333333;
+}
+
+.messages {
+
+  li {
+    list-style: none;
+
+    .message {
+      border: solid 3px white;
+      border-radius: 6px;
+      display: block;
+      color: white;
+      font-size: 1em;
+      width: 30%;
+      text-align: left;
+    }
+
+    &:nth-child(odd) .message {
+      margin: 0 0 0 -6em;
+      padding: 1em 2em 1em 4em;
+      float: left;
+    }
+
+    &:nth-child(even) .message {
+      margin: 0 -4em 0 0;
+      padding: 1em 4em 1em 2em;
+      float: right;
+    }
+
+    .timestamp {
+      color: white;
+      width: 25%;
+      opacity: 0.3;
+      padding-top: 1em;
+    }
+
+    &:nth-child(odd) .timestamp {
+      text-align: right;
+      float: left;
+      clear: both;
+    }
+
+    &:nth-child(even) .timestamp {
+      float: right;
+      clear: both;
+    }
+
+  }
+}
+
+#message-bay {
+  display: block;
+  width: 100%;
+  bottom: 0;
+  background: white;
+  padding: 1em;
+  margin-top: 6em;
+  position: fixed;
+}
+
+.message-container {
+  width: 80%;
+  float: left;
+  font-size: 1.25em;
+  padding-top: 1em;
+}
+
+.message-button {
+  font-size: 1.5em;
+  padding: 1em;
+  width: 15%;
+  float: right;
+}
+
+/*
+.center {
+  width: 100vw;
+  height: 100vh;
+
+  background: shade($primary, 0.6);
+
+  @include position(fixed);
+
+  @include display(flex);
+  @include flex-direction(column);
+  @include align-items(center);
+  @include justify-content(center);
+}
+
+*/
