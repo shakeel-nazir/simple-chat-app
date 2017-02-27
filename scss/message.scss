@@ -20,8 +20,8 @@
       opacity: 0.8;
       display: block;
       color: white;
-      font-size: 1.25em;
-      width: 30%;
+      font-size: 1em;
+      max-width: 70%;
       text-align: left;
       overflow-y: scroll;
     }
@@ -35,7 +35,7 @@
     }
 
     &:nth-child(even) .message {
-      background-color: #f16462;
+      background-color: #333333;
       margin: 0 -3em 0 0;
       padding: 1em 4em 1em 2em;
       float: right;
@@ -70,7 +70,7 @@
   bottom: 0;
   background: white;
   padding: 1em;
-  min-height: 200px;
+  min-height: 100px;
   position: fixed;
 }
 

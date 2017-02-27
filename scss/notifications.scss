@@ -31,9 +31,9 @@
 
       .notification {
         padding: 5px 15px;
-        &.connect { background-color: green;}
-        &.disconnect { background-color: red;}
-        &.info { background: blue;}
+        &.connect { background-color: white;}
+        &.disconnect { background-color: #333333;}
+        &.info { background: #f16462;}
 
 
         &.disconnect,
