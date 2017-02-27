@@ -21,7 +21,7 @@
       display: block;
       color: white;
       font-size: 1em;
-      max-width: 70%;
+      min-width: 35%;
       text-align: left;
       overflow-y: scroll;
     }
@@ -47,6 +47,7 @@
       width: 25%;
       opacity: 0.9;
       padding-top: 1em;
+      font-weight: bold;
     }
 
     &:nth-child(odd) .timestamp {
