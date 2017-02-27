@@ -1,0 +1,41 @@
+.notificaiton-container {
+
+  @include position(fixed);
+  top: O;
+  left: 0;
+  width: 100vw;
+  pointer-events: none;
+  z-index: 99999999;
+  background: transparent;
+
+  .notifications {
+
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  @include display(flex);
+  @include flex-direction(columns);
+  @include align-items(center);
+  @include justify-content(center);
+
+    li {
+      margin: 5px 15px;
+      width: calc(100% - 40px);
+
+      .notification {
+        padding: 5px 15px;
+        &.connect { background-color: green;}
+        &.disconnect { background-color: red; }
+        &.info { background: blue; }
+
+
+
+        &.disconnect,
+        &.info {
+        color: white;
+        }
+      }
+    }
+  }
+}

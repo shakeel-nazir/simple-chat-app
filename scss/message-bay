@@ -1,0 +1,20 @@
+#message-bay {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 3.5vh;
+  min-height: 200px;
+
+  display: flex;
+  flex-direction: row-revers;
+  flex-wrap: nowrap;
+  include align-items: center;
+  include justify-content: flex-start;
+}
+
+.messages {
+
+height: 75vh;
+overflow-y: scroll;
+}

@@ -1,0 +1,73 @@
+@import 'layers';
+@import 'colours';
+@import 'default';
+
+.center {
+  width: 100%;
+  height: 100%;
+
+  z-index: $middle;
+
+
+
+  @include position(fixed);
+
+  @include display(flex);
+  @include flex-direction(columns);
+  @include align-items(center);
+  @include justify-content(center);
+}
+
+.background {
+  background-image: url(../images/giphy.gif);
+  background-position: center 100%;
+  background-size: cover;
+  width:100%;
+  height:100%;
+  background-repeat: no-repeat;
+  position: fixed;
+}
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: $primary;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  margin-left: 50%;
+  margin-right: 50%;
+  color: $second;
+}
+
+.popup .content {
+
+  overflow: auto;
+}
+
+input {
+  margin-top: 1em;
+
+}
