@@ -8,14 +8,26 @@
   background-size: cover;
   background-repeat: no-repeat;
   position: fixed;
+  overflow-y: scroll;
 }
 
 .messages {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
 
   li {
     list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    white-space: pre-wrap;
+    word-wrap: break-word;
 
     .message {
+      max-width: 35%;
       border-radius: 6px;
       opacity: 0.8;
       display: block;
@@ -23,43 +35,43 @@
       font-size: 1em;
       min-width: 35%;
       text-align: left;
-      overflow-y: scroll;
+
+    }
+
+    &:nth-child(odd) {
+      align-items: flex-end;
     }
 
     &:nth-child(odd) .message {
-      background-color: #333333;
-      margin: 0 0 0 -5em;
-      padding: 1em 2em 1em 4em;
-      float: left;
-      clear: both;
+      background-color: #ff8172;
+      margin: 0 -2em 0 0em;
+      padding: 1em 4em 1em 2em;
+      align-items: flex-end;
     }
 
     &:nth-child(even) .message {
       background-color: #333333;
-      margin: 0 -3em 0 0;
-      padding: 1em 4em 1em 2em;
-      float: right;
-      clear: both;
+      margin: 0 0 0 -2em;
+      padding: 1em 2em 1em 4em;
+      align-items: flex-end;
     }
 
     .timestamp {
       color: white;
-      width: 25%;
-      opacity: 0.9;
+      width: 35%;
+      opacity: 0.7;
       padding-top: 1em;
       font-weight: bold;
     }
 
     &:nth-child(odd) .timestamp {
-      text-align: right;
-      float: left;
-      clear: both;
-      padding-right: 2em;
+      text-align: left;
+      padding-right: 0;
     }
 
     &:nth-child(even) .timestamp {
-      float: right;
-      clear: both;
+      text-align: right;
+      padding-left: 2em;
     }
 
   }
@@ -76,32 +88,29 @@
 }
 
 .message-container {
-  width: 80%;
-  float: left;
+  width: 75%;
   font-size: 1.25em;
   padding-top: 1em;
+  float: left;
+  resize: none;
+  max-height: 100px;
 }
 
 .message-button {
-  font-size: 1.5em;
+  font-size: 1.25em;
   padding: 1em;
+  margin: 0;
   width: 15%;
+  border-radius: 6px;
   float: right;
+  background: #333333;
+  color: white;
 }
 
-/*
-.center {
-  width: 100vw;
-  height: 100vh;
-
-  background: shade($primary, 0.6);
-
-  @include position(fixed);
-
-  @include display(flex);
-  @include flex-direction(column);
-  @include align-items(center);
-  @include justify-content(center);
+.message-button:hover {
+  background: #ff8172;
 }
 
-*/
+.show {
+  display: none;
+}
