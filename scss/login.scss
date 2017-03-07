@@ -18,6 +18,26 @@
   @include justify-content(center);
 }
 
+h1 {
+  color: $second;
+  text-align: center;
+  width: 100%;
+}
+
+a {
+  width: 100%;
+  text-align: center;
+  color: $third;
+  text-decoration: none;
+  border: 2px;
+  border-color: $third;
+}
+
+a:hover {
+     color: $second; 
+     cursor: pointer;
+}
+
 .background {
   background-image: url(../images/giphy.gif);
   background-position: center 100%;
@@ -49,25 +69,31 @@
   margin: 70px auto;
   padding: 20px;
   background: $primary;
-  border-radius: 5px;
+  border-radius: 10px;
   width: 30%;
   position: relative;
   transition: all 5s ease-in-out;
 }
 
 .popup h2 {
-  margin-top: 0;
-  margin-left: 50%;
-  margin-right: 50%;
+  text-align: center;
   color: $second;
 }
 
 .popup .content {
-
+  margin-top: 1em;
+  text-align: center;
+  color: $third;
   overflow: auto;
 }
 
 input {
   margin-top: 1em;
+  margin-left: 0;
+  align-items: stretch;
+  width: 100%;
 
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid $third;
 }
