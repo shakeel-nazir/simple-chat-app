@@ -24,17 +24,21 @@ h1 {
   width: 100%;
 }
 
+.button {
+  padding: 1em;
+}
+
 a {
   width: 100%;
   text-align: center;
   color: $third;
   text-decoration: none;
-  border: 2px;
-  border-color: $third;
+  background-color: $primary;
+  border-radius: 5px;
 }
 
 a:hover {
-     color: $second; 
+     color: $second;
      cursor: pointer;
 }
 
